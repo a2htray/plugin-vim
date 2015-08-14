@@ -1,0 +1,70 @@
+#-------------------用于18无限--------------
+snippet 18worksp
+	USE [${1:--dbName}]
+	IF OBJECTPROPERTY(OBJECT_ID(N'${2:spName}'),N'IsProcedure') = 1
+		DROP PROCEDURE ${3:--spName};
+	GO
+	--------------------------------------------------------------------------------------------
+	-- Name:					${4:spName}
+	-- Purpose:					${5:purpose}
+	-- Author:					a2htray
+	-- Create date:				${6:createDate}
+	-- Excecution Example:	
+	-- Alter/Alter Date/Reason:	
+	--------------------------------------------------------------------------------------------
+	CREATE PROCEDURE ${7:--spName}
+		${8:--params}
+	AS
+	BEGIN
+		${9:--content}
+	END
+
+	GO
+
+snippet select
+	SELECT ${2:field} FROM ${1:tbName}
+
+snippet ob
+	ORDER BY
+	
+snippet gb
+	GROUP BY
+	
+snippet wh
+	WHERE
+
+snippet casew
+	CASE WHEN ${1:condition} THEN ${2:result} ELSE ${3:result} END
+
+snippet case
+	CASE ${1:real} WHEN ${2:except} THEN ${3:result} ELSE ${4:result} END
+	
+snippet if
+	IF ${1:condition}
+	BEGIN
+		${2:commad}
+	END
+
+snippet ifelse
+	IF ${1:condition}
+	BEGIN
+		${2:commad}
+	END
+	ELSE
+	BEGIN
+		${3:command}
+	END
+
+
+
+	
+	
+	
+	
+	
+	
+    
+	
+	    
+		    
+
