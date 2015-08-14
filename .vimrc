@@ -40,21 +40,23 @@ set autoread
 "自动缩进
 set autoindent
 
+"打开插件的配置
+filetype plugin on
+
 "unknow
 set softtabstop=4
 set shiftwidth=4
 
 "代码提示
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascr¨©pt set omnifunc=javascr¨©ptcomplete#CompleteJS
+autocmd FileType py set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
-"unknow
-filetype plugin on
+
 filetype indent on
 
 "语法高亮
@@ -127,7 +129,7 @@ Plugin 'altercation/vim-colors-solarized'
 "使用Tab进行快速编写已有的模版
 Plugin 'vim-scripts/snipMate'
 
-"下载对python的自动提示功能
+"对python进行自动提示功能
 Plugin 'rkulla/pydiction'
 
 "---------------------------------------------------------------------
@@ -146,5 +148,7 @@ syntax enable
 set background=dark
 colorscheme solarized  "设置主题
 
-
+"对pydiction的配置
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_menu_height = 15
 
